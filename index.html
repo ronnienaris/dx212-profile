@@ -3,16 +3,203 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Profile</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Ronnie Studwicke | Profile</title>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-orange: #ff6b35;
+            --primary-hover: #e85a24;
+            --orange-light: #fff3ed;
+            --bg-surface: #f9f9fb;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border-color: #f1f5f9;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--bg-surface);
+            color: var(--text-main);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 24px;
+            line-height: 1.6;
+        }
+
+        /* Card Container */
+        .profile-card {
+            background: var(--card-bg);
+            width: 100%;
+            max-width: 480px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px -5px rgba(255, 107, 53, 0.08), 
+                        0 4px 15px -2px rgba(0, 0, 0, 0.04);
+            border: 1px solid rgba(255, 107, 53, 0.12);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .profile-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 36px -6px rgba(255, 107, 53, 0.15), 
+                        0 6px 20px -3px rgba(0, 0, 0, 0.06);
+        }
+
+        /* Top Accent Banner */
+        .card-header {
+            background: linear-gradient(135deg, #ff6b35, #ff9248);
+            height: 110px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Profile Picture Avatar Styling */
+        .avatar-container {
+            width: 86px;
+            height: 86px;
+            position: absolute;
+            bottom: -43px;
+            border-radius: 50%;
+            border: 4px solid var(--card-bg);
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff;
+            overflow: hidden;
+        }
+
+        .avatar-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Card Content */
+        .card-body {
+            padding: 55px 32px 32px;
+            text-align: center;
+        }
+
+        .name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 10px;
+        }
+
+        /* Badges */
+        .badge-group {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .badge {
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 4px 12px;
+            border-radius: 9999px;
+        }
+
+        .badge-id {
+            background-color: var(--orange-light);
+            color: var(--primary-orange);
+        }
+
+        .badge-dept {
+            background-color: #f1f5f9;
+            color: var(--text-muted);
+        }
+
+        /* Bio Paragraph */
+        .bio {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            text-align: left;
+            margin-bottom: 28px;
+            background: #fafafa;
+            padding: 16px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+        }
+
+        /* GitHub Button */
+        .action-wrapper {
+            display: flex;
+            justify-content: center;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: var(--primary-orange);
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            padding: 12px 28px;
+            border-radius: 12px;
+            transition: background-color 0.2s ease, transform 0.15s ease;
+        }
+
+        .btn:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-2px);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+    </style>
 </head>
 <body>
-    <h1>Ronnie Studwicke</h1>
+    <main class="profile-card">
+        <!-- Top decorative banner -->
+        <div class="card-header">
+            <div class="avatar-container">
+                <!-- Replace 'profile.jpg' with your image path or URL -->
+                <img src="6823765109_รอนนี่ นริศ สตุดวิค.jpg" alt="Ronnie Studwicke" class="avatar-img">
+            </div>
+        </div>
 
-    <p>6823765109 / College of Innovation</p>
+        <div class="card-body">
+            <h1 class="name">Ronnie Studwicke</h1>
+            
+            <div class="badge-group">
+                <span class="badge badge-id">ID: 6823765109</span>
+                <span class="badge badge-dept">College of Innovation</span>
+            </div>
 
-    <p>I am a student at the College of Innovation, pursuing a degree in Computer Science. I have a passion for technology and enjoy working on various projects that challenge my skills and creativity. In my free time, I like to explore new programming languages and frameworks, as well as contribute to open-source projects.</p>
-    
-    <a href="https://github.com/ronnienaris" target="_blank">GitHub Profile</a>
+            <p class="bio">
+                I am a student at the College of Innovation, pursuing a degree in Computer Science. I have a passion for technology and enjoy working on various projects that challenge my skills and creativity. In my free time, I like to explore new programming languages and frameworks, as well as contribute to open-source projects.
+            </p>
+
+            <div class="action-wrapper">
+                <a href="https://github.com/ronnienaris" target="_blank" rel="noopener noreferrer" class="btn btn-github">
+                    <!-- GitHub Icon -->
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                    </svg>
+                    <span>GitHub Profile</span>
+                </a>
+            </div>
+        </div>
+    </main>
 </body>
 </html>
